@@ -1,0 +1,45 @@
+baseURL = 'https://fredmedlin.com/'
+languageCode = 'en-us'
+title = 'Fred Medlin'
+theme = "etch"
+enableInlineShortcodes = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  description = "Personal site of Fred Medlin"
+  copyright = "Copyright © 2021 by Fred Medlin"
+  dark = "auto"
+  highlight = true
+
+  [menu]
+    [[menu.main]]
+      identifier = "posts"
+      name = "posts"
+      title = "posts"
+      url = "/"
+      weight = 10
+
+      [[menu.main]]
+        identifier = "tags"
+        name = "tags"
+        title = "tags"
+        url = "/tags/"
+        weight = 20
+
+        [[menu.main]]
+          identifier = "now"
+          name = "now"
+          title = "now"
+          url = "/now/"
+          weight = 20
+
+  [permalinks]
+    posts = "/:title/"
+
+  [markup.goldmark.renderer]
+    # Allow HTML in Markdown
+    unsafe = true
+
+    [markup.tableOfContents]
+      ordered = true
